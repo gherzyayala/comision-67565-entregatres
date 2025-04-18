@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111115;
+}
+
+/* Estilos del header 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    nav{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                a{
+                    text-decoration: none;
+                    color: $color-tipografia;
+                    font-weight: bold;
+                    padding: 8px 12px;
+                    transition: color 0.3s;
+                    border-radius: 5px;
+                    background-color: $background-botones;
+                    :hover{
+                        color: $color-transicion-primario;
+                    }
+                }
+            }
+        }
+    }
+
+}
+*/
+.logo {
+  max-width: 100%;
+  height: 50px;
+}
+
+/*Estilos del main*/
+main {
+  text-align: center;
+  padding: 20px;
+}
+main a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s;
+  border-radius: 5px;
+  background-color: #383747;
+}
+main a :hover {
+  color: #007BFF;
+}
+main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+p {
+  font-size: 1rem;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  background-color: #383747;
+}
+ul li a :hover {
+  background-color: #0056b3;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+}
+
+.grid-container-dos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+}
+
+section {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+svg {
+  margin-bottom: 10px;
+}
+
+/* Estilos de formularios */
+.formulario {
+  margin: 0 auto;
+  width: min(60rem, 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.formulario fieldset {
+  border: none;
+}
+.formulario fieldset legend {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.campo :nth-child(7) {
+  grid-column: 1/3;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.enviar {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 1rem;
+  color: whitesmoke;
+  font-weight: bold;
+  background-color: #383747;
+  font-size: 1rem;
+  transition: color 0.3s;
+  border-radius: 5px;
+  background-color: #383747;
+}
+.enviar :hover {
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  cursor: pointer;
+  background-color: #007BFF;
+}
+
+/* estilos para footer */
+footer {
+  padding: 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: whitesmoke;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.footer-bottom p, .footer-bottom a {
+  flex: 1; /* nuevo: permite que ocupen el espacio disponible */
+  text-align: left;
+}
+.footer-bottom a {
+  text-decoration: none;
+  padding: 6px 12px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Estilo de header para celulares*/
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .logo {
+    height: 35px;
+  }
+  header nav {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  header nav ul {
+    justify-content: center;
+  }
+  header nav ul li a {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+}
+/* estilos del main para celulares */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  ul li {
+    width: 100%;
+    max-width: 300px;
+  }
+  ul li a {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Responsive: 2 columnas en mobile (3 filas × 2 columnas) */
+@media (max-width: 768px) {
+  .grid-container,
+  .grid-container-dos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Extra responsive: 1 columna en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .grid-container,
+  .grid-container-dos {
+    grid-template-columns: 1fr;
+  }
+}
+/* estilos para footer en celulares */
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-bottom p, .footer-bottom a {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

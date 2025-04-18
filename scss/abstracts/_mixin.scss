@@ -1,0 +1,5 @@
+// con parametros
+@mixin medidas($max-width, $height){
+    max-width: $max-width;
+    height: $height;
+}
